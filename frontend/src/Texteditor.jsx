@@ -10,7 +10,7 @@ function Texteditor() {
     const [socket, setsocket] = useState();
     const [quill, setQuill] = useState();
     const SAVE_INTERVAL_MS = 2000
-
+    //Tool bar configuration
     const TOOLBAR_OPTIONS = [
         [{ header: [1, 2, 3, 4, 5, 6, false] }],
         [{ font: [] }],
@@ -24,7 +24,7 @@ function Texteditor() {
     ]
 
     useEffect(() => {
-        const s = io("all-editor.vercel.app")
+        const s = io("https://all-editor.vercel.app/")
         setsocket(s);
 
         return () => {
