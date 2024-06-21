@@ -14,7 +14,21 @@ const db = mongoose.connection;
 db.on('connected', () => {
     console.log('online connected');
 });
-const io = require("socket.io")(3001, {
+const express = require('express');
+const app = express();
+const port = 3001;
+
+app.get('/', (req, res) => {
+    console.log("express server");
+
+});
+
+const server = app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
+});
+
+// Add your existing socket.io code here
+const io = require("socket.io")(server, {
     cors: {
         origin: "*",
         methods: ["GET", "POST"],
