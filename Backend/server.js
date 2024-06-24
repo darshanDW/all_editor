@@ -20,7 +20,7 @@ const port = 3001;
 
 app.get('/', (req, res) => {
     console.log("express server");
-    req.send(5);
+
 
 });
 
