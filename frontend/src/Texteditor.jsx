@@ -24,7 +24,7 @@ function Texteditor() {
     ]
 
     useEffect(() => {
-        const s = io("https://all-editor.vercel.app/")
+        const s = io(" https://490c-2409-40c2-201c-9abd-6cd9-1610-3e10-dcb7.ngrok-free.app")
         setsocket(s);
 
         return () => {
