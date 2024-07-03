@@ -31,6 +31,7 @@ const server = app.listen(port, () => {
 // Add your existing socket.io code here
 const io = require("socket.io")(server, {
     cors: {
+        
         origin: "*",
         methods: ["GET", "POST"],
     },
