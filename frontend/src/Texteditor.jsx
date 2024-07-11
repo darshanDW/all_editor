@@ -24,7 +24,7 @@ function Texteditor() {
     ]
 
     useEffect(() => {
-        const s = io("http://localhost:3001")
+        const s = io("https://alledit.onrender.com")
         setsocket(s);
 
         return () => {
